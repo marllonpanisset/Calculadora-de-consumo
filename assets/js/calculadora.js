@@ -312,3 +312,9 @@ var ssccf4n = function(op,id,colors,data1,data2,data3,data4){
             
     }
 };
+
+window.addEventListener("load", function(event) {
+    console.log("Todos os recursos terminaram o carregamento!");
+    LoadFromQueryString();
+    recalc_onclick("");
+ });
