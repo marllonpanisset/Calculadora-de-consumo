@@ -3,6 +3,7 @@
   <head>
   <meta content='IE=Edge' http-equiv='X-UA-Compatible'>
   <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Calculadora De Consumo</title>
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -11,7 +12,7 @@
 </head>
 <body onload='LoadFromQueryString();recalc_onclick("");' >
   <form id='formc' class="form" name='formc' method='post' target='_top' onkeydown='javascript:navigate(event);'>
-    <div class="container display-flex">
+    <div class="container display-flex mobile">
     
     
       <main class="calculadora">
@@ -37,7 +38,7 @@
         </div>
     
         
-        <fieldset style="margin-top: 23px; margin-left: 21px; display: flex; align-items: center;">
+        <fieldset class="label">
           <!-- <div class='ssc-tooltip'>Digite um &quot;X&quot; se a cerâmica for Porcelanato, Granito, Pastilha ou outro material com absorção = Zero</div> -->
           <label for="XLEW_1_6_7">
             Porcelanato?
@@ -45,7 +46,7 @@
             <span class="checkmark"></span>
           </label>
 
-          <label style="margin-left: 20px;" for="XLEW_1_8_6">
+          <label for="XLEW_1_8_6">
             Cerâmicas aplicadas em área Externa?
             <input id='XLEW_1_8_6' type='checkbox' value='n' class='ee153' onchange="recalc_onclick('XLEW_1_8_6')" name='XLEW_1_8_6' tabindex='7' data-sheet='1' data-row='8' data-col='6'/>
             <span class="checkmark"></span>
