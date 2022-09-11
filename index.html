@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+  <meta content='IE=Edge' http-equiv='X-UA-Compatible'>
+  <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+  <title>Calculadora De Consumo</title>
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="/assets/css/calculadora.css">
+</head>
+<body onload='LoadFromQueryString();recalc_onclick("");' >
+  <form id='formc' class="form" name='formc' method='post' target='_top' onkeydown='javascript:navigate(event);'>
+    <div class="container display-flex">
+    
+    
+      <main class="calculadora">
+        <h4>Calculadora de consumo</h4>
+
+        <div class="box-title revestimento">
+          <h5>Revestimento</h5>
+        </div>
+        
+        
+        <div class="display-flex width-100">
+
+          <fieldset class="col-6 justify-content--space-around display-flex">
+            <!-- <div class='ssc-tooltip'>Digite a Largura da cerâmica em Centímetros</div> -->
+              <input id='XLEW_1_6_2' type='number' value='50' class='ee141' placeholder="Largura da peça (cm)" onchange="this.value=eedisplayFloatNDTh(eeparseFloatTh(this.value),0);recalc_onclick('XLEW_1_6_2')" name='XLEW_1_6_2' tabindex='1' data-sheet='1' data-row='6' data-col='2'/>
+          </fieldset>
+
+          <fieldset class="col-6 justify-content--space-between display-flex">
+            <!-- <div class='ssc-tooltip'>Digite o Comprimento da cerâmica em Centímetros</div> -->
+            <input id='XLEW_1_6_4' type='number' value='50' class='ee141' placeholder="Comprimento da peça (cm)" onchange="this.value=eedisplayFloatNDTh(eeparseFloatTh(this.value),0);recalc_onclick('XLEW_1_6_4')" name='XLEW_1_6_4' tabindex='2' data-sheet='1' data-row='6' data-col='4'/>  
+          </fieldset>
+
+        </div>
+    
+        
+        <fieldset style="margin-top: 23px; margin-left: 21px; display: flex; align-items: center;">
+          <!-- <div class='ssc-tooltip'>Digite um &quot;X&quot; se a cerâmica for Porcelanato, Granito, Pastilha ou outro material com absorção = Zero</div> -->
+          <label for="XLEW_1_6_7">
+            Porcelanato?
+            <input id='XLEW_1_6_7' type='checkbox' value='' class='ee144' onchange="recalc_onclick('XLEW_1_6_7')" name='XLEW_1_6_7' tabindex='4' data-sheet='1' data-row='6' data-col='7'/>
+            <span class="checkmark"></span>
+          </label>
+
+          <label style="margin-left: 20px;" for="XLEW_1_8_6">
+            Cerâmicas aplicadas em área Externa?
+            <input id='XLEW_1_8_6' type='checkbox' value='n' class='ee153' onchange="recalc_onclick('XLEW_1_8_6')" name='XLEW_1_8_6' tabindex='7' data-sheet='1' data-row='8' data-col='6'/>
+            <span class="checkmark"></span>
+          </label>
+        </fieldset>
+        
+        <div class="box-title juntas">
+          <h5>Juntas</h5>
+        </div>
+
+        <div class="display-flex width-100">
+
+          <fieldset class="col-6 justify-content--space-around display-flex">
+            <input id='XLEW_1_6_5' type='number' value='10' placeholder="Espessura da peça (mm)" class='ee141' onchange="this.value=eedisplayFloatNDTh(eeparseFloatTh(this.value),0);recalc_onclick('XLEW_1_6_5')" name='XLEW_1_6_5' tabindex='3' data-sheet='1' data-row='6' data-col='5'/>
+          </fieldset>
+          
+          <fieldset class="col-6 justify-content--space-between display-flex">
+            <!-- <div class='ssc-tooltip'>Digite a distância entre as peças, em Milímetros</div> -->
+            <input id='XLEW_1_7_6' type='number' value='3' class='ee141' placeholder="Largura da junta (mm)" onchange="this.value=eedisplayFloatNDTh(eeparseFloatTh(this.value),0);recalc_onclick('XLEW_1_7_6')" name='XLEW_1_7_6' tabindex='6' data-sheet='1' data-row='7' data-col='6'/>
+          </fieldset>
+        </div>
+
+        <div class="display-flex width-100" style="margin-top: 22px;">
+          <fieldset class="col-6 justify-content--space-around display-flex" style="margin-left: 0;">
+            <input id='XLEW_1_7_2' type='number' value='110' placeholder="Área total a ser assentada (m²)" class='ee141' onchange="this.value=eedisplayFloatNDTh(eeparseFloatTh(this.value),0);recalc_onclick('XLEW_1_7_2')" name='XLEW_1_7_2' tabindex='5' data-sheet='1' data-row='7' data-col='2'/>
+          </fieldset>
+        </div>
+    
+        <fieldset style="display: none;">
+          <input id='XLEW_1_8_7' type='number' readonly='readonly' value='' class='ee154'  name='XLEW_1_8_7' tabindex='-1' />
+        </fieldset>
+      </main>
+    
+      <aside class="calculadora-resultado">
+          
+        <h4>Resultado:</h4>
+    
+        <fieldset style="display: none;">
+          <input id='XLEW_1_10_4' type='text' readonly='readonly' value='0' class='ee159'  name='XLEW_1_10_4' tabindex='-1' />
+          <input id='XLEW_1_11_4' type='text' readonly='readonly' value='0' class='ee159'  name='XLEW_1_11_4' tabindex='-1' />
+          <input id='XLEW_1_11_6' type='text' readonly='readonly' value='0' class='ee164'  name='XLEW_1_11_6' tabindex='-1' />
+          <input id='XLEW_1_11_7' type='text' readonly='readonly' value='0' class='ee166'  name='XLEW_1_11_7' tabindex='-1' />
+        </fieldset>
+
+        <fieldset>
+          <span><strong>Rejunte</strong></span>
+        </fieldset>
+
+        <fieldset>
+          <span>Consumo Mínimo</span>
+        </fieldset>
+
+        <fieldset>
+          <input id='XLEW_1_12_4' disabled type='text' readonly='readonly' value='0' class='ee173' name='XLEW_1_12_4' tabindex='-1' />
+          <span>Kg =</span>
+        </fieldset>
+
+        <fieldset>
+          <input id='XLEW_1_12_6' disabled type='text' readonly='readonly' value='0' class='ee174' name='XLEW_1_12_6' tabindex='-1' />
+        </fieldset>
+        
+        <fieldset>
+          sacos 20Kg 
+        </fieldset>
+
+        <!--  -->
+        <span style="display: none">
+          <input id='XLEW_1_13_1' disabled type='text' readonly='readonly' value='' class='ee173 eeleft'  name='XLEW_1_13_1' tabindex='-1' />
+        </span>
+
+        <fieldset style="margin-top: 20px">
+          <span>Consumo Máximo</span>
+        </fieldset>
+
+        <fieldset>
+          <input id='XLEW_1_13_4' disabled type='text' readonly='readonly' value='0' class='ee173' name='XLEW_1_13_4' tabindex='-1' />
+          <span>Kg =</span>
+        </fieldset>
+
+        <fieldset>
+          <input id='XLEW_1_13_6' disabled type='text' readonly='readonly' value='0' class='ee174' name='XLEW_1_13_6' tabindex='-1' />
+        </fieldset>
+
+        <fieldset>
+          <span><strong>sacos 20Kg </strong></span>
+        </fieldset>
+        
+        <fieldset style="margin-top:30px">
+          <span><strong>Argamassa</strong></span>
+        </fieldset>
+
+        <fieldset>
+          <textarea disabled name='XLEW_1_14_2' rows="3" readonly='readonly' class='ee178' id='XLEW_1_14_2' tabindex='-1' type='text' value=''>
+          </textarea>
+        </fieldset>
+
+        <fieldset>
+          <input disabled id='XLEW_1_14_4' type='text' readonly='readonly' value='0' class='ee180' name='XLEW_1_14_4' tabindex='-1' />
+          <span> Kg = </span>
+        </fieldset>
+
+        <fieldset>
+          <input disabled id='XLEW_1_14_6' type='text' readonly='readonly' value='0' class='ee182'  name='XLEW_1_14_6' tabindex='-1' />
+        </fieldset>
+
+        <fieldset>
+          sacos 20Kg 
+        </fieldset>
+        
+        <fieldset style="display: none">
+          <input disabled id='XLEW_1_15_1' type='text' readonly='readonly' value='' class='ee180 eeleft'  name='XLEW_1_15_1' tabindex='-1' />
+        </fieldset>
+
+        <fieldset>
+          <textarea disabled name='XLEW_1_15_2' rows="3" readonly='readonly' class='ee178' id='XLEW_1_15_2' style=' border:0px solid #000000; width:100%; overflow: hidden ' tabindex='-1' type='text' value=''>
+          </textarea>
+        </fieldset>
+
+        <fieldset>
+          <input disabled id='XLEW_1_15_4' type='text' readonly='readonly' value='0' class='ee180' name='XLEW_1_15_4' tabindex='-1' />
+          <span> Kg = </span>
+        </fieldset>
+
+        <fieldset>
+          <input disabled id='XLEW_1_15_6' type='text' readonly='readonly' value='0' class='ee182'  name='XLEW_1_15_6' tabindex='-1' />
+        </fieldset>
+        
+        <fieldset>
+          <span>sacos 20Kg</span>
+        </fieldset>
+
+        <fieldset style='display: none;'>
+          <input id='XLEW_1_16_1' type='text' readonly='readonly' value='' class='ee184'  name='XLEW_1_16_1' tabindex='-1' />
+          <input id='XLEW_1_16_7' type='text' readonly='readonly' value='' class='ee186'  name='XLEW_1_16_7' tabindex='-1' />
+        </fieldset>
+        
+        <fieldset style="margin-top: 30px">
+          <input disabled id='XLEW_1_17_1' type='text' readonly='readonly' value='' class='ee184'  name='XLEW_1_17_1' tabindex='-1' />
+        </fieldset>
+        
+        <fieldset>
+          <input disabled id='XLEW_1_17_7' type='text' readonly='readonly' value='' class='ee188'  name='XLEW_1_17_7' tabindex='-1' />
+        </fieldset>
+        
+      </aside>
+
+    </div>
+      
+  </form>
+
+</body>
+<!-- <script type="text/javascript" src="assets/js/jquery.qtip.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js" integrity="sha512-HkAISJ55u/2jGG42Bet54ZmPM+7+XKCY84JsDoKGYK98EeVGg5Ka/NcvnE4lYCzbX3+aGN46rpShBtDLg1wo9w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/calculadora.js"></script>
+
+</html>
