@@ -312,33 +312,3 @@ var ssccf4n = function(op,id,colors,data1,data2,data3,data4){
             
     }
 };
-
-
-// function Porcelanato() {
-//     var Porcelanato = document.getElementById("XLEW_1_6_7")
-    
-//     if (Porcelanato.checked != true) {
-//         console.log("1")
-        
-//         Porcelanato.setAttribute('value','s')
-//     } else {
-//         Porcelanato.setAttribute('value','n')
-//         console.log("2")
-//     }
-// }
-
-
-
-// function AreaExterna() {
-//     var AreaExterna = document.getElementById("XLEW_1_8_6")
-    
-//     if (AreaExterna.checked != true) {
-//         console.log("1")
-        
-//         AreaExterna.setAttribute('value','s')
-//     } else {
-//         AreaExterna.setAttribute('value','n')
-//         console.log("2")
-//     }
-// }
-

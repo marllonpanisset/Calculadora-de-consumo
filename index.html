@@ -26,21 +26,22 @@
         
         <div class="display-flex width-100">
 
-          <fieldset class="col-6 justify-content--space-around display-flex">
+          <fieldset class="col-6  display-flex flex-wrap--wrap">
             <!-- <div class='ssc-tooltip'>Digite a Largura da cerâmica em Centímetros</div> -->
+            <label for="XLEW_1_6_2">Largura da peça (cm)</label>
               <input id='XLEW_1_6_2' type='number' value='50' class='ee141' placeholder="Largura da peça (cm)" onchange="this.value=eedisplayFloatNDTh(eeparseFloatTh(this.value),0);recalc_onclick('XLEW_1_6_2')" name='XLEW_1_6_2' tabindex='1' data-sheet='1' data-row='6' data-col='2'/>
           </fieldset>
 
-          <fieldset class="col-6 justify-content--space-between display-flex">
+          <fieldset class="col-6 justify-content--space-between display-flex flex-wrap--wrap">
             <!-- <div class='ssc-tooltip'>Digite o Comprimento da cerâmica em Centímetros</div> -->
+            <label for="XLEW_1_6_4">Comprimento da peça (cm)</label>
             <input id='XLEW_1_6_4' type='number' value='50' class='ee141' placeholder="Comprimento da peça (cm)" onchange="this.value=eedisplayFloatNDTh(eeparseFloatTh(this.value),0);recalc_onclick('XLEW_1_6_4')" name='XLEW_1_6_4' tabindex='2' data-sheet='1' data-row='6' data-col='4'/>  
           </fieldset>
 
         </div>
     
         
-        <fieldset class="label">
-          <!-- <div class='ssc-tooltip'>Digite um &quot;X&quot; se a cerâmica for Porcelanato, Granito, Pastilha ou outro material com absorção = Zero</div> -->
+        <fieldset class="label" style="display: none;">          
           <label for="XLEW_1_6_7">
             Porcelanato?
             <input id='XLEW_1_6_7' type='checkbox' value='' class='ee144' onchange="recalc_onclick('XLEW_1_6_7')" name='XLEW_1_6_7' tabindex='4' data-sheet='1' data-row='6' data-col='7'/>
@@ -61,18 +62,19 @@
 
         <div class="display-flex width-100">
 
-          <fieldset class="col-6 justify-content--space-around display-flex">
+          <fieldset class="col-6  display-flex flex-wrap--wrap">
+            <label for="XLEW_1_6_5">Espessura da peça (mm)</label>
             <input id='XLEW_1_6_5' type='number' value='10' placeholder="Espessura da peça (mm)" class='ee141' onchange="this.value=eedisplayFloatNDTh(eeparseFloatTh(this.value),0);recalc_onclick('XLEW_1_6_5')" name='XLEW_1_6_5' tabindex='3' data-sheet='1' data-row='6' data-col='5'/>
           </fieldset>
           
-          <fieldset class="col-6 justify-content--space-between display-flex">
+          <fieldset class="col-6 display-flex flex-wrap--wrap">
             <!-- <div class='ssc-tooltip'>Digite a distância entre as peças, em Milímetros</div> -->
+            <label for="XLEW_1_7_6">Largura da junta (mm)</label>
             <input id='XLEW_1_7_6' type='number' value='3' class='ee141' placeholder="Largura da junta (mm)" onchange="this.value=eedisplayFloatNDTh(eeparseFloatTh(this.value),0);recalc_onclick('XLEW_1_7_6')" name='XLEW_1_7_6' tabindex='6' data-sheet='1' data-row='7' data-col='6'/>
           </fieldset>
-        </div>
-
-        <div class="display-flex width-100" style="margin-top: 22px;">
-          <fieldset class="col-6 justify-content--space-around display-flex" style="margin-left: 0;">
+          
+          <fieldset class="col-6 display-flex flex-wrap--wrap" style="margin-left: 0;">
+            <label for="XLEW_1_7_2">Área total a ser assentada (m²)</label>
             <input id='XLEW_1_7_2' type='number' value='110' placeholder="Área total a ser assentada (m²)" class='ee141' onchange="this.value=eedisplayFloatNDTh(eeparseFloatTh(this.value),0);recalc_onclick('XLEW_1_7_2')" name='XLEW_1_7_2' tabindex='5' data-sheet='1' data-row='7' data-col='2'/>
           </fieldset>
         </div>
@@ -102,7 +104,7 @@
 
         <div class="resultado">
           <fieldset class="sacos-20kg">
-            <input id="XLEW_1_12_6" style="width: 30px;" disabled="" type="text" readonly="readonly" value="0" class="ee174" name="XLEW_1_12_6" tabindex="-1">
+            <input id="XLEW_1_12_6" disabled="" type="text" readonly="readonly" value="0" class="ee174" name="XLEW_1_12_6" tabindex="-1">
             <span>saco(s) 20Kg</span>
             
             <span style="display: none">
@@ -119,14 +121,14 @@
     
         </div>
         
-        <div class="icon">
+        <div class="icon" style="padding-left: 10px;">
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABPSURBVHgB7dehDQAgDAVRymwdu7uBxZBcwFTcs02asz+qao1HmRm328/fORoyijKKMooyijKKMopqGSVJh3DNQEZRRlFGUUZRRlFGUS2jNsccDqGuh3nsAAAAAElFTkSuQmCC
           " alt="rejunte">
         </div>
 
         <div class="resultado">
           <fieldset class="sacos-20kg">
-            <input id="XLEW_1_13_6" style="width: 30px" disabled="" type="text" readonly="readonly" value="0" class="ee174" name="XLEW_1_13_6" tabindex="-1">
+            <input id="XLEW_1_13_6" disabled="" type="text" readonly="readonly" value="0" class="ee174" name="XLEW_1_13_6" tabindex="-1">
             <span>saco(s) 20Kg</span>
           </fieldset>
           
@@ -165,7 +167,7 @@
 
         </div>
 
-        <div class="icon">
+        <div class="icon" style="padding-left: 10px;">
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABCSURBVHgB7c4xAcAwDMCwbvwhhVtLwWcOCYG+mblnmf8sJFVJVVKVVCVVSVVSlVQlVUlVUpVUJVVJVVKVVCVVrUw9E3UDffjfz60AAAAASUVORK5CYII=" alt="rejunte">
         </div>
 

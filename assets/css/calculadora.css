@@ -41,6 +41,10 @@
     .display-flex {
         display: flex;
     }
+
+    .flex-wrap--wrap {
+        flex-wrap: wrap;
+    }
     
     .justify-content--space-around {
         justify-content: space-around;
@@ -61,9 +65,21 @@
         background-color: var(--bg-cinza-resultado-calculadora);
         display: flex;
         flex-wrap: wrap;
-        padding: 52px 63px 59px 43px;
     }
     
+    @media (min-width: 768px) {
+        .calculadora-resultado {
+            padding: 52px 63px 59px 43px;
+        }
+
+    }
+
+    @media (max-width: 767px) {
+        .calculadora-resultado {
+            padding: 40px 30px 40px 30px;
+        }    
+
+    }
     
     
     @media (min-width: 1170px) {
@@ -82,6 +98,24 @@
             max-width: 90%;
         }
     }
+
+    @media (max-width: 599px) {
+        .calculadora-resultado .icon {
+            padding-left: 0 !important;
+        }
+    }
+
+    @media (min-width:901px) {
+        .calculadora-resultado .icon {
+            /* padding-top: 13px; */
+        }
+    }
+
+    @media (min-width: 600px) {
+        .calculadora-resultado .icon {
+            padding-left: 0 !important;
+        }
+    }
     
     @media (max-width: 639px) {
         .form input[type="number"] {
@@ -92,9 +126,6 @@
             flex-wrap: wrap;
         }
     
-        .col-6.justify-content--space-between.display-flex {
-            margin-top: 20px;
-        }
     
         .box-title.revestimento + .display-flex.width-100 {
             flex-wrap: wrap;
@@ -104,9 +135,13 @@
         .col-6.display-flex {
             width: 100%;
         }
+
+        .calculadora .col-6.display-flex.flex-wrap--wrap:not(:last-child) {
+            margin-bottom: 22px;
+        }
     }
     
-    @media (min-width: 1024px) and (max-width: 1169px) {
+    @media (min-width: 901px) and (max-width: 1169px) {
         .calculadora {
             width: 54%;
         }
@@ -117,10 +152,15 @@
         
         .calculadora-resultado .resultado {
             width: 85%;
+            padding-left: 10px;
         }
     }
     
-    @media (max-width: 1023px) {
+    @media (max-width: 900px) {
+
+        .calculadora-resultado .icon {
+            /* padding-top: 16px; */
+        }
         
         .calculadora label {
             font-size: 14px;
@@ -128,8 +168,8 @@
         }
         
         .sacos-20kg input {
-            font-size: 28px;
-            line-height: 34px;
+            font-size: 27px;
+            line-height: 33px;
         }
         
         .sacos-20kg {
@@ -157,20 +197,39 @@
     
     .calculadora h4 {
         font-weight: 900;
-        font-size: 36px;
-        line-height: 43px;
         color: var(--preto);
         width: 100%;
         margin-top: 0;
         margin-bottom: 66px;
     }
-    
-    
+
+    @media(min-width: 601px) {
+        .calculadora h4 {
+            font-size: 36px;
+            line-height: 43px;
+        }
+        .calculadora-resultado h4 {
+            font-size: 36px;
+            line-height: 43px;
+        }
+    }
+
+    @media(max-width: 600px) {
+        .calculadora-resultado h4 {
+            font-size: 30px;
+            line-height: 38px;
+        }
+
+        .calculadora h4 {
+            font-size: 30px;
+            line-height: 38px;
+        }
+    }
+
+
     .calculadora-resultado h4 {
         font-weight: 900;
-        font-size: 36px;
         width: 100%;
-        line-height: 43px;
         margin-bottom: 19px;
         margin-top: 0;
         color: var(--titulo-resultado);
@@ -189,41 +248,52 @@
         line-height: 19px;
         color: var(--preto);
         flex-wrap: wrap;
+        margin-bottom: 5px;
     }
     
-    @media (min-width: 481px) {
+    @media (min-width: 600px) {
+
+        
+
         .calculadora label {
-            font-size: 16px;
+            font-size: 14px;
         }
     
         .sacos-20kg input {
-            font-size: 26px;
-            line-height: 33px;
+            font-size: 21px;
+            line-height: 34px;
         }
     }
     
     
-    @media (max-width: 480px) {
-        
-    }
     
-    @media (min-width: 640px) and (max-width: 1023px) {
+    
+    @media (min-width: 600px) and (max-width: 900px) {
         .calculadora-resultado .resultado {
             width: 39%;
         }
         .calculadora-resultado .icon {
             width: 10%;
+            padding-left: 10px !important
         }
     }
     
-    @media (max-width: 639px) {
+    @media (max-width: 599px) {
         .calculadora-resultado .resultado {
             width: 80%;
         }
-    
+
+        .consumo-minimo-kg, .consumo-maximo-kg {
+            padding-left: 20px;
+        }    
     
         .calculadora-resultado .icon {
-            width: 20%;
+            width: 11%;
+            padding-top: 11px;
+        }
+
+        .sacos-20kg {
+            padding-left: 20px;
         }
     
     }
@@ -233,14 +303,22 @@
         color: var(--branco);
     }
     
-    @media (min-width: 1024px) {
+    .calculadora-resultado .icon {
+        /* height: 47px; */
+    }
+    
+    @media (min-width: 901px) {
         .sacos-20kg {
-            font-size: 36px;
-            line-height: 43px;
+            font-size: 26px;
+            line-height: 40px;
         }
     
         .calculadora-resultado .icon {
             width: 14%
+        }
+
+        .resultado {
+            width: 80%;
         }
 
         
@@ -270,7 +348,7 @@
         }
     }
     
-    @media (max-width: 390px) {
+    @media (max-width: 767px) {
         .calculadora-resultado {
             padding: 32px 33px 39px 33px;
         }
@@ -290,6 +368,8 @@
     .consumo-maximo {
         width: 35%;
     }
+    
+    
     
     .consumo-minimo-kg,
     .consumo-maximo-kg {
@@ -347,7 +427,7 @@
     
     
     .box-title.juntas {
-        margin-top: 66px
+        margin-top: 46px
     }
     
     
