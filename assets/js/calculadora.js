@@ -55,10 +55,10 @@ function calc(data) {
     var c1F11=(((((c1D11)*(((c1F7)/(1000)))))*(((c1E6)/(1000)))));
     var c1G11=(((((((c1B6)*(c1D6)))<(401)))?(1):(1.5)));
     var c1A13=(((((c1F7)<(4)))?("Junta Fina"):(" ")));
-    var c1B14=(((((((c1B6)*(c1D6)))<(401)))?("Consumo Mínimo"):("Consumo Mínimo + Tardoz")));
+    var c1B14=(((((((c1B6)*(c1D6)))<(401)))?("Consumo Mínimo"):("Consumo Mínimo =")));
     var c1D14=(((((c1B7)*(5)))*(c1G11)));
     var c1A15=(((str_eq((c1F8),("S")))?("Flexível AC-II"):("AC-I")));
-    var c1B15=(((((((c1B6)*(c1D6)))<(401)))?("Consumo Máximo"):("Consumo Máximo + Tardoz")));
+    var c1B15=(((((((c1B6)*(c1D6)))<(401)))?("Consumo Máximo"):("Consumo Máximo =")));
     var c1A16=(((str_eq((c1F8),("S")))?("Usar Argamassa tipo AC-II e Rejunte Flexível"):("Usar Argamassa e Rejunte convencionais")));
     var c1G16=(((str_eq((c1G6),("X")))?("AC-III "):(" ")));
     var c1A17=(((((((c1B6)*(c1D6)))>(401)))?("Passar Argamassa no Tardoz"):("Assentamento convencional - movimentar as peças")));

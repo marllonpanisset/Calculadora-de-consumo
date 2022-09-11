@@ -86,6 +86,87 @@ fieldset {
     color: var(--titulo-resultado);
 }
 
+.calculadora-resultado h5 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--titulo-resultado);
+    width: 100%;
+}
+
+.calculadora label {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--preto);
+}
+
+.consumo-minimo,
+.consumo-maximo,
+.consumo-minimo input,
+.consumo-maximo input {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--branco);
+}
+
+.consumo-minimo,
+.consumo-maximo {
+    width: 35%;
+}
+
+.consumo-minimo-kg,
+.consumo-maximo-kg {
+    height: 20px;
+    line-height: 0;
+}
+
+.consumo-minimo-kg span,
+.consumo-maximo-kg span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--branco);
+}
+
+.calculadora-resultado input {
+    background: none;
+    outline: none;
+    border: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    
+}
+
+.consumo-minimo-kg input,
+.consumo-maximo-kg input {
+    font-weight: 400;
+    line-height: 0;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--bg-box-title);
+    max-width: 72px;
+    width: auto;
+}
+
+.sacos-20kg input {
+    width: 50px;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 43px;
+
+    color: #FAC03E;
+}
+
+.sacos-20kg {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 43px;
+    color: var(--branco);
+}
+
 .box-title {
     height: 52px;
     width: 100%;
@@ -102,6 +183,10 @@ fieldset {
 .box-title.juntas {
     background: var(--bg-box-title) url(/assets/images/icon-pisos-box-title.png) no-repeat;
     margin-top: 66px
+}
+
+.calculadora-resultado .icon {
+    width: 14%
 }
 
 .form input[type='checkbox'] {
